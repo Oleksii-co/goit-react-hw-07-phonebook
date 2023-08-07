@@ -3,7 +3,7 @@ import contactList from './ContactList.module.css';
 import { deleteContact } from 'redux/contactsSlice';
 
 const ContactList = () => {
-  const contactData = useSelector(state => state.contacts);
+  const contactData = useSelector(state => state.contacts.items);
   const filter = useSelector(state => state.filter);
 
   const filterContacts = contactData.filter(contact => {

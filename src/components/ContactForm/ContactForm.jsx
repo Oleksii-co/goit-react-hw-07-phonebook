@@ -7,14 +7,14 @@ import { addContact } from 'redux/contactsSlice';
 const ContactForm = () => {
   const dispatch = useDispatch();
 
-  const contacts = useSelector(state => state.contacts);
+  const contacts = useSelector(state => state.contacts.items);
 
   const addContacts = newContactData => {
     const newContact = {
       ...newContactData,
     };
     if (!checkNewContactPresence(newContact.name)) {
-      dispatch(addContact(newContact.name,newContact.tel));
+      dispatch(addContact(newContact.name, newContact.tel));
     } else {
       alert(`${newContact.name} is already in contacts!`);
     }
