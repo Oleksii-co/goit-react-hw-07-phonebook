@@ -1,11 +1,11 @@
 import filter from './Filter.module.css';
 
 import { useSelector, useDispatch } from 'react-redux';
-import { setFilter } from 'redux/phonebookActions';
+import { setFilter } from 'redux/filterSlice';
 
 const Filter = () => {
   const dispatch = useDispatch();
-  const value = useSelector(state => state.contacts.filter);
+  const value = useSelector(state => state.filter);
 
   const onChange = ({ target }) => {
     dispatch(setFilter(target.value));
