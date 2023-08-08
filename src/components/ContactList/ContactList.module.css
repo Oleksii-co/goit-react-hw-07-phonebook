@@ -26,3 +26,17 @@
   background-color: #3f00ff;
   color: #ffffff;
 }
+
+.noContacts{
+  margin-top: 20px;
+  margin-left: 20px;
+}
+.error{
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.loading{
+  margin-top: 20px;
+  margin-left: 20px;
+}
